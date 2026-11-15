@@ -1,0 +1,20 @@
+@server = http://localhost:4004
+@svc = {{server}}/odata/v4/customer360
+
+### All interactions, newest first
+GET {{svc}}/Interactions?$orderby=contactDate desc
+
+### All opportunities
+GET {{svc}}/Opportunities
+
+### Log a new call
+POST {{svc}}/Interactions
+Content-Type: application/json
+
+{ "customerID": "1000002", "type": "Call", "contactDate": "{{$datetime 'YYYY-MM-DD'}}", "summary": "Asked about the 2027 price list.", "salesRep": "Ben Carter" }
+
+### A customer number that does not exist. In the starter, this is SAVED. You fix it in step 6.
+POST {{svc}}/Interactions
+Content-Type: application/json
+
+{ "customerID": "9999999", "type": "Visit", "contactDate": "{{$datetime 'YYYY-MM-DD'}}", "summary": "Who is this?", "salesRep": "Ben Carter" }

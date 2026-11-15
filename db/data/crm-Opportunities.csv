@@ -1,0 +1,6 @@
+ID;customerID;title;value;currency;stage;closeDate
+7b2e1d3f-2c4e-4d6f-9a81-000000000001;1000001;Holiday stock top-up;45000;EUR;Open;2026-12-10
+7b2e1d3f-2c4e-4d6f-9a81-000000000002;1000001;Store fittings 2026;18000;EUR;Won;2026-06-30
+7b2e1d3f-2c4e-4d6f-9a81-000000000003;1000002;Service contract 2027;24000;EUR;Open;2027-01-15
+7b2e1d3f-2c4e-4d6f-9a81-000000000004;1000003;Spare parts, 200 units;62000;EUR;Open;2027-02-28
+7b2e1d3f-2c4e-4d6f-9a81-000000000005;1000000;Warehouse shelving;9500;EUR;Lost;2026-09-01
