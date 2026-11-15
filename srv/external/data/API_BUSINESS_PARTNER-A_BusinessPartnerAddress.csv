@@ -1,0 +1,6 @@
+BusinessPartner;AddressID;StreetName;HouseNumber;PostalCode;CityName;Country
+1000000;22001;Lindenstrasse;12;69190;Walldorf;DE
+1000001;22002;Market Street;400;94105;San Francisco;US
+1000002;22003;King Street;25;M1 4PB;Manchester;GB
+1000003;22004;MG Road;88;560001;Bengaluru;IN
+1000004;22005;Chuo-dori;3-1;104-0061;Tokyo;JP

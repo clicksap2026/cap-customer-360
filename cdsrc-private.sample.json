@@ -1,0 +1,11 @@
+{
+  "requires": {
+    "API_BUSINESS_PARTNER": {
+      "[sandbox]": {
+        "credentials": {
+          "headers": { "APIKey": "<paste your API key from api.sap.com here>" }
+        }
+      }
+    }
+  }
+}

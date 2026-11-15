@@ -13,8 +13,33 @@ Content-Type: application/json
 
 { "customerID": "1000002", "type": "Call", "contactDate": "{{$datetime 'YYYY-MM-DD'}}", "summary": "Asked about the 2027 price list.", "salesRep": "Ben Carter" }
 
-### A customer number that does not exist. In the starter, this is SAVED. You fix it in step 6.
+### A customer number that does not exist: must FAIL with 400 (in the starter it was saved)
 POST {{svc}}/Interactions
 Content-Type: application/json
 
 { "customerID": "9999999", "type": "Visit", "contactDate": "{{$datetime 'YYYY-MM-DD'}}", "summary": "Who is this?", "salesRep": "Ben Carter" }
+
+#####################################################################
+# From step 3 on: S/4HANA data (mock, sandbox or destination)
+#####################################################################
+
+### Customers, read live from S/4HANA
+GET {{svc}}/Customers?$top=5
+
+### One customer
+GET {{svc}}/Customers('1000001')
+
+### Addresses of one customer
+GET {{svc}}/CustomerAddresses?$filter=customerID eq '1000003'
+
+### Interactions, now with the customer name
+GET {{svc}}/Interactions?$select=customerID,customerName,type,contactDate,summary
+
+### Opportunities, with the customer name
+GET {{svc}}/Opportunities?$select=customerID,customerName,title,value,stage
+
+### The 360 view of one customer
+GET {{svc}}/customer360(ID='1000001')
+
+### The 360 view of a customer that does not exist: 404
+GET {{svc}}/customer360(ID='9999999')
